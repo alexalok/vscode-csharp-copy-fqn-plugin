@@ -1,0 +1,47 @@
+{
+  "name": "csharp-copy-reference",
+  "displayName": "C# Copy Reference",
+  "description": "Copy fully qualified C# type and member names from the editor.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.120.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:csharp-copy-reference.copyFullyQualifiedName",
+    "onLanguage:csharp"
+  ],
+  "main": "./out/src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "csharp-copy-reference.copyFullyQualifiedName",
+        "title": "Copy Fully Qualified Name",
+        "category": "C#"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "csharp-copy-reference.copyFullyQualifiedName",
+          "when": "editorLangId == csharp",
+          "group": "navigation@100"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p .",
+    "compile": "tsc -p .",
+    "test": "pnpm run compile && node --test out/test/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/vscode": "^1.120.0",
+    "typescript": "^6.0.3"
+  }
+}
