@@ -3,7 +3,24 @@
   "displayName": "C# Copy Reference",
   "description": "Copy fully qualified C# type and member names from the editor.",
   "version": "0.0.1",
-  "publisher": "local",
+  "publisher": "alexalok",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexalok/vscode-csharp-copy-fqn-plugin.git"
+  },
+  "icon": "media/icon.png",
+  "keywords": [
+    "csharp",
+    "c#",
+    "copy",
+    "reference",
+    "fully-qualified-name",
+    "symbol"
+  ],
+  "galleryBanner": {
+    "color": "#1f2937",
+    "theme": "dark"
+  },
   "license": "MIT",
   "engines": {
     "vscode": "^1.120.0"
